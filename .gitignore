@@ -21,7 +21,6 @@ node_modules
 .cache
 build
 coverage
-*.js
 *.jsx
 *.map
 !tests/index.js
