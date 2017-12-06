@@ -64,6 +64,6 @@
     "babel-runtime": "6.x",
     "classnames": "2.x",
     "moment": "2.x",
-    "rmc-picker": "3.x"
+    "rmc-picker": "git+https://github.com/leaflet-co/m-picker.git#3.x"
   }
 }
