@@ -1,5 +1,5 @@
 import React from 'react';
-import Picker from 'rmc-picker/lib/index.web';
+import Picker from 'rmc-picker/lib/index';
 import classnames from 'classnames';
 import DatePickerProps from './DatePickerProps';
 import DatePickerMixin from './DatePickerMixin';
