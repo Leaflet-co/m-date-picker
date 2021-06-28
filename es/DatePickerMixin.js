@@ -1,16 +1,3 @@
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
-var _moment = _interopRequireDefault(require("moment"));
-
-var _en_US = _interopRequireDefault(require("./locale/en_US"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -23,6 +10,9 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToAr
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
+import moment from 'moment';
+import defaultLocale from './locale/en_US';
+
 function getDaysInMonth(now, selYear, selMonth) {
   return now.clone().year(selYear).month(selMonth).endOf('month').date();
 }
@@ -32,10 +22,10 @@ var DATETIME = 'datetime';
 var DATE = 'date';
 var TIME = 'time';
 var LEAFLET = 'leaflet';
-var _default = {
+export default {
   getDefaultProps: function getDefaultProps() {
     return {
-      locale: _en_US["default"],
+      locale: defaultLocale,
       mode: DATE,
       onDateChange: function onDateChange() {}
     };
@@ -320,7 +310,7 @@ var _default = {
     return [hours, minutes];
   },
   getGregorianCalendar: function getGregorianCalendar(arg) {
-    return (0, _moment["default"])(arg);
+    return moment(arg);
   },
   clipDate: function clipDate(date) {
     var mode = this.props.mode;
@@ -391,4 +381,3 @@ var _default = {
     };
   }
 };
-exports["default"] = _default;

@@ -1,6 +1,6 @@
 {
   "name": "rmc-date-picker",
-  "version": "5.0.4",
+  "version": "5.0.5",
   "description": "React Mobile DatePicker Component for web and react-native",
   "keywords": [
     "react",
@@ -44,26 +44,26 @@
     "coverage": "rc-tools run coverage"
   },
   "devDependencies": {
-    "@types/mocha": "~2.2.32",
-    "@types/react": "~0.14.41",
-    "@types/react-dom": "~0.14.18",
-    "@types/react-native": "~0.29.36",
+    "@types/mocha": "8.2.2",
+    "@types/react": "17.0.1",
+    "@types/react-dom": "17.0.8",
+    "@types/react-native": "0.64.10",
     "expect.js": "0.3.x",
-    "fastclick": "^1.0.6",
-    "jquery": "^2.1.4",
+    "fastclick": "1.0.6",
+    "jquery": "3.6.0",
     "pre-commit": "1.x",
-    "rc-tools": "5.x",
-    "react": "15.3.2",
+    "rc-tools": "9.x",
+    "react": "17.0.2",
     "react-addons-test-utils": "15.3.2",
-    "react-dom": "15.3.2",
-    "react-native": "0.34.1",
-    "react-native-index-page": "~0.1.0"
+    "react-dom": "17.0.2",
+    "react-native": "0.64.2",
+    "react-native-index-page": "2.0.0"
   },
   "typings": "./lib/index.web.d.ts",
   "dependencies": {
     "babel-runtime": "6.x",
     "classnames": "2.x",
     "moment": "2.x",
-    "rmc-picker": "3.x"
+    "rmc-picker": "5.x"
   }
 }

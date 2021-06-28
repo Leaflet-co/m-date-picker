@@ -1,16 +1,3 @@
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _Popup = _interopRequireDefault(require("rmc-picker/lib/Popup"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -32,6 +19,9 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+import React from 'react';
+import PopupPicker from "rmc-picker/es/Popup";
 
 function noop() {}
 
@@ -113,13 +103,12 @@ var PopupDatePicker = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var dataPicker = /*#__PURE__*/_react["default"].cloneElement(this.props.datePicker, {
+      var dataPicker = /*#__PURE__*/React.cloneElement(this.props.datePicker, {
         date: this.state.pickerDate || this.props.date,
         onDateChange: this.onPickerChange,
         ref: this.saveRef
       });
-
-      return /*#__PURE__*/_react["default"].createElement(_Popup["default"], _extends({}, this.props, {
+      return /*#__PURE__*/React.createElement(PopupPicker, _extends({}, this.props, {
         onVisibleChange: this.fireVisibleChange,
         onOk: this.onOk,
         content: dataPicker,
@@ -129,9 +118,9 @@ var PopupDatePicker = /*#__PURE__*/function (_React$Component) {
   }]);
 
   return PopupDatePicker;
-}(_react["default"].Component);
+}(React.Component);
 
-exports["default"] = PopupDatePicker;
+export { PopupDatePicker as default };
 PopupDatePicker.defaultProps = {
   onVisibleChange: noop,
   prefixCls: 'rmc-picker-popup',
