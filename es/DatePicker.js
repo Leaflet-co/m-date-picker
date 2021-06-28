@@ -1,5 +1,6 @@
 import { View, StyleSheet } from 'react-native';
 import React from 'react';
+import createReactClass from 'create-react-class';
 import Picker from "rmc-picker/es/Picker";
 import DatePickerMixin from './DatePickerMixin';
 var styles = StyleSheet.create({
@@ -16,7 +17,7 @@ var styles = StyleSheet.create({
     paddingBottom: 10
   }
 });
-var DatePicker = React.createClass({
+var DatePicker = createReactClass({
   displayName: "DatePicker",
   mixins: [DatePickerMixin],
   render: function render() {
